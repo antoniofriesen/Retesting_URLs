@@ -7,6 +7,7 @@ this code tests and retests a list of URLs provided in an array.
 2 - test the urls using axios.
 3 - reassign status code 408 to all urls that exceed timeout.
 4 - save all urls with status code to a json file called "results.json"
+5 - retest all urls with status code 408 till there are none left or max timeout is exceeded.
 
 # TODO
 
