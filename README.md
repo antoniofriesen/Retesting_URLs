@@ -1,9 +1,9 @@
 # Purpose
-this code retests the previous results from Linkchecker.
+this code tests and retests a list of URLs provided in an array.
 
 
 ## Procedure
-1 - get the urls to be tested from file "urls2Test.json".
+1 - get the urls to be tested from file "test.json".
 2 - test the urls using axios.
 3 - reassign status code 408 to all urls that exceed timeout.
 4 - save all urls with status code to a json file called "results.json"
@@ -12,7 +12,7 @@ this code retests the previous results from Linkchecker.
 
 ## 24.04.2023
 
-CHECKLIST
+IMPLEMENTATION CHECKLIST
 
 - [x] get the urls to be tested from file "urls2Test.json".
 - [x] test the urls using axios.
@@ -24,4 +24,3 @@ CHECKLIST
 - [x] max timout = 300 seconds (5 min)
 - [x] exit while loop after retest array is empty of max timeout exceeded.
 - [x] if while loop is exited, but retest array is not empty save urls into results.json with status code 408
-- [ ] save results.json to NAS.
