@@ -1,0 +1,16 @@
+{
+  "name": "retesting",
+  "version": "1.0.0",
+  "description": "this code retests the previous results from Linkchecker.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
