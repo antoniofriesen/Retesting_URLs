@@ -1,27 +1,44 @@
-# Purpose
-this code tests and retests a list of URLs provided in an array.
+# URL Testing Tool
 
+## Description
+The URL Testing Tool is a utility designed to assess the accessibility of a list of URLs provided in a JSON file. It performs initial tests on the URLs, categorizing their response statuses, and conducts retests on those that exceed the specified timeout. The results are saved in a structured format, allowing for easy review and analysis of URL performance.
 
-## Procedure
-1 - get the urls to be tested from file "test.json".
-2 - test the urls using axios.
-3 - reassign status code 408 to all urls that exceed timeout.
-4 - save all urls with status code to a json file called "results.json"
-5 - retest all urls with status code 408 till there are none left or max timeout is exceeded.
+## Features
+- Tests URLs from a JSON file using Axios.
+- Handles timeout errors by reassigning a status code of `408` for requests that exceed the timeout limit.
+- Automatically retests URLs with a `408` status until they succeed or the maximum timeout is reached.
+- Saves the results in a JSON file for easy access and further analysis.
 
-# TODO
+## Installation
 
-## 24.04.2023
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/antoniofriesen/Retesting_URLs.git
+   ```
 
-IMPLEMENTATION CHECKLIST
+2. **Install dependencies:**
+   Ensure you have Node.js installed. Then run:
+   ```bash
+   npm install
+   ```
 
-- [x] get the urls to be tested from file "urls2Test.json".
-- [x] test the urls using axios.
-- [x] reassign status code 408 to all urls that exceed timeout.
-- [x] save all the urls with status code in an array called "retest"
-- [x] creating a function called retestUrls, that has a while loop that retests all urls inside "retest"
-- [x] while loop should reassigned the retested urls with status code != 408 accordingly.
-- [x] after every run of the while loop timeout should be increased by 15 seconds
-- [x] max timout = 300 seconds (5 min)
-- [x] exit while loop after retest array is empty of max timeout exceeded.
-- [x] if while loop is exited, but retest array is not empty save urls into results.json with status code 408
+3. **Prepare your input file:**
+   Create a JSON file named `urls2Test.json` containing an array of URLs to be tested.
+
+## Usage
+
+1. **Run the application:**
+   Execute the script using Node.js:
+   ```bash
+   node index.js
+   ```
+
+2. **Review the results:**
+   After execution, check the `results.json` file for the status codes of the tested URLs.
+
+## Contributing
+Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug reports.
+
+## License
+This project is licensed under the MIT License.
+
